@@ -15,6 +15,6 @@ return {
 		local Util = IncludedCommandUtil.ForContext(CommandContext)
 		local success, data = Playtesting:GetTime(CommandContext.Executor.UserId)
 		if not success then Util:SendMessage("An error occured when trying to send your session: " .. data) return end
-        Util:SendMessage("You have " .. data.hours .. " hours, " .. data.minutes .. " minutes, and " .. data.seconds .. " seconds.")
+        Util:SendMessage("You have " .. data.hours .. " hours, " .. data.minutes .. " minutes, and " .. data.seconds .. " seconds. (If you do not have a session active, this is the time of your last session)")
 	end
 }
