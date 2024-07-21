@@ -16,16 +16,16 @@ function api:GetAPIRoute(route)
 end
 
 function api:PostAPIRoute(route, data)
-    if typeof(route) ~= "string" or typeof(data) ~= "table" then return false, "Invalid parsing of route" end
+    if typeof(route) ~= "string" and typeof(data) ~= "table" then return false, "Invalid parsing of route" end
     if string.sub(route, 1, 1) ~= "/" then return false, "Route must start with a slash" end
 
-    local success, data = pcall(function()
-        return HttpService:PostAsync(config.BASE_API_URL .. route, HttpService:JSONEncode(data))
+    local success, d = pcall(function()
+        return HttpService:PostAsync(config.BASE_API_URL .. route, HttpService:JSONEncode(data), Enum.HttpContentType.ApplicationJson)
     end)
 
-    if not success then return false, data end
+    if not success then return false, d end
 
-    return true, data
+    return true, d
 end
 
 return api

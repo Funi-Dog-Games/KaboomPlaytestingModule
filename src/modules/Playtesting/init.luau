@@ -23,14 +23,14 @@ function playtesting:GetTime(RUID: number | string)
     local success2, data2 = api:PostAPIRoute("/time", { uid = HttpService:JSONDecode(data).uid })
     if not success2 then return false, "There was an error trying to send /time: " .. data end
 
-    return HttpService:JSONDecode(data2).data -- { hours, minutes, seconds }
+    return true, HttpService:JSONDecode(data2).data -- { hours, minutes, seconds }
 end
 
 function playtesting:GetLB()
     local success, data = api:GetAPIRoute("/lb")
     if not success then return false, "There was an error trying to get /lb: " .. data end
 
-    return HttpService:JSONDecode(data).data -- { { uid, time, placement } }
+    return true, HttpService:JSONDecode(data).data -- { { uid, time, placement } }
 end
 
 function playtesting:Ping()
