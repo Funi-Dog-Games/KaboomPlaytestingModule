@@ -1,5 +1,5 @@
 local api = {}
-local config = require(script.config)
+local config = require(script.Parent.config)
 local HttpService = game:GetService("HttpService")
 
 function api:GetAPIRoute(route)
