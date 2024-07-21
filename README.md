@@ -1,5 +1,5 @@
 # Kaboom Playtesting Module 🛠️
-Frontend for [the kaboom testing utility](https://github.com/Funi-Dog-Games/KaboomPlaytestingUtility)
+Frontend for [the kaboom testing utility](https://github.com/Funi-Dog-Games/KaboomTestingUtility)
 
 A demo for this module can be found in the [releases tab](https://github.com/Funi-Dog-Games/KaboomPlaytestingModule/releases)
 
