@@ -17,3 +17,6 @@ End your active session
 Get the amount of time you've been spending on your active session or your past session if one is not active
 ### :timelb
 Show a leaderboard of all the playtesters (time and placement)
+
+
+![image](https://github.com/user-attachments/assets/24e1ce9d-5446-4d8a-97af-7a4bdc613760)
